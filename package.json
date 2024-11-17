@@ -1,0 +1,16 @@
+{
+  "name": "проект-26",
+  "version": "1.0.0",
+  "description": "Проєкт з формою зворотного зв'язку",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
