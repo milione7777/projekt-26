@@ -1,25 +1,17 @@
-import { saveFormData } from "./formData.js";
+import { saveFormData } from "./data";
 
-const form = document.getElementById("feedback-form");
-const successMessage = document.getElementById("success-message");
+document.getElementById("feedback-form").addEventListener("submit", (event) => {
+  event.preventDefault();
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault(); 
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
 
-  const formData = {
-    name: form.name.value,
-    email: form.email.value,
-    message: form.message.value,
-  };
+  saveFormData({ name, email, message });
 
-  saveFormData(formData);
-
-  successMessage.textContent = `Дякуємо, ${formData.name}! Ваше повідомлення надіслано успішно.`;
+  const successMessage = document.getElementById("success-message");
   successMessage.classList.remove("hidden");
+  successMessage.classList.add("visible");
 
-  form.reset();
-
-  setTimeout(() => {
-    successMessage.classList.add("hidden");
-  }, 5000);
+  event.target.reset()
 });

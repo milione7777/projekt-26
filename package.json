@@ -1,8 +1,8 @@
 {
-  "name": "проект-26",
+  "name": "projekr-26",
   "version": "1.0.0",
   "description": "Проєкт з формою зворотного зв'язку",
-  "main": "index.js",
+  "main": "./index.js",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html"

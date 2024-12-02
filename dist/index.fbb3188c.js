@@ -142,14 +142,14 @@
       this[globalName] = mainExports;
     }
   }
-})({"aVDr4":[function(require,module,exports,__globalThis) {
+})({"iYWvF":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
 var HMR_USE_SSE = false;
-module.bundle.HMR_BUNDLE_ID = "5d97959e6059ec30";
+module.bundle.HMR_BUNDLE_ID = "106c69fefbb3188c";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, HMR_USE_SSE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -584,44 +584,24 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     });
 }
 
-},{}],"3d49z":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "saveFormData", ()=>saveFormData);
-function saveFormData(saveFormData) {
-    console.log("Form Data:", saveFormData);
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports,__globalThis) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, '__esModule', {
-        value: true
+},{}],"bDbGG":[function(require,module,exports,__globalThis) {
+var _data = require("./data");
+document.getElementById("feedback-form").addEventListener("submit", (event)=>{
+    event.preventDefault();
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+    (0, _data.saveFormData)({
+        name,
+        email,
+        message
     });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === 'default' || key === '__esModule' || Object.prototype.hasOwnProperty.call(dest, key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
+    const successMessage = document.getElementById("success-message");
+    successMessage.classList.remove("hidden");
+    successMessage.classList.add("visible");
+    event.target.reset();
+});
 
-},{}]},["aVDr4","3d49z"], "3d49z", "parcelRequire94c2")
+},{"./data":"3d49z"}]},["iYWvF","bDbGG"], "bDbGG", "parcelRequire94c2")
 
-//# sourceMappingURL=index.6059ec30.js.map
+//# sourceMappingURL=index.fbb3188c.js.map

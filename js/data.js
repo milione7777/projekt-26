@@ -1,3 +1,3 @@
-export function saveFormData(data) {
-  console.log("Дані форми збережено:", data);
+export function saveFormData(saveFormData) {
+  console.log("Form Data:", saveFormData);
 }
