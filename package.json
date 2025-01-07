@@ -1,0 +1,19 @@
+{
+  "name": "project-name",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@pnotify/core": "^5.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  }
+}
